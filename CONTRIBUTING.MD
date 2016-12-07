@@ -1,6 +1,6 @@
 We use [Waffle](https://waffle.io/Silverkeytechnology/Kole) to manage our work on features,issues, chores and bugfixes. See the [Recommended-Workflow-Using-Pull-Requests-&-Automatic-Work-Tracking](https://github.com/waffleio/waffle.io/wiki/Recommended-Workflow-Using-Pull-Requests-&-Automatic-Work-Tracking) for more details on the Waffle workflow.
 
-*To start working on a ticket please check that it has been estimated in waffle!*  If not please feel free to start a vote on the story in the [Kole Slack Channel](https://Silverkeytechnologies.slack.com/messages/ttc/). See the [instructions for running an asynchronous vote](,/ASYNC_VOTING.md), and feel free to join a hangout scrum in order to vote synchronously if you prefer.  Scrum times on the [project wiki page](https://github.com/Silverkeytechnology/Kole/about) page.
+*To start working on a ticket please check that it has been estimated in waffle!*  If not please feel free to start a vote on the story in the [Kole Slack Channel](https://Silverkeytechnologies.slack.com/messages/ttc/). See the [instructions for running an asynchronous vote](,/AsyncVotingGuide.md), and feel free to join a hangout scrum in order to vote synchronously if you prefer.  Scrum times on the [project wiki page](https://github.com/Silverkeytechnology/Kole/about) page.
 
 Once a ticket has been estimated, feel free to add yourself to the list of assignees.  If there are existing assignees we strongly recommend reaching out to them to see how their work is going.   Here's a flow chart for the overal process:
 
