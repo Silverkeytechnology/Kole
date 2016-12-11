@@ -3,7 +3,14 @@
 //Setting up handles
 let express = require('express');
 let app = express();
+let crossenv = require('cross-env');
+
 let port = 3000;
+
+let configFile = '.env';
+if (process.env.NODE_ENV == "test") {
+  configFile = '.env.test';
+}
 
 //Setup server to listen for connections
 app.listen(port, function(err, callback) {
@@ -15,6 +22,6 @@ app.listen(port, function(err, callback) {
 });
 
 //Setup routes
-app.get('/', function(req, res) {
+app.get('/api', function(req, res) {
   res.send("This Home Page for You!!");
 })
