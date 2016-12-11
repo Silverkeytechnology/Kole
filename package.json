@@ -1,0 +1,28 @@
+{
+  "name": "kole",
+  "version": "1.0.0",
+  "description": "A Student Information Management System",
+  "main": "/bin/server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Silverkeytechnology/Kole.git"
+  },
+  "keywords": [
+    "Kole",
+    "MEAN",
+    "Student",
+    "Node"
+  ],
+  "author": "Chaiwa Berian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Silverkeytechnology/Kole/issues"
+  },
+  "homepage": "https://github.com/Silverkeytechnology/Kole#readme"
+}
