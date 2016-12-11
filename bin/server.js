@@ -15,9 +15,7 @@ if (process.env.NODE_ENV == "test") {
 dotenv.load({ path: configFile });                //this will read the.env or .env.test file, parse the contents, and assign it to process.env
 
 //setup a connection to the server using mongoose
-setTimeout (function () {
   mongoose.connect(process.env.MONGODB);
-}, 60000);
 
 let dbConn = mongoose.connection;
 //listen for when open connection
