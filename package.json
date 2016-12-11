@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "A Student Information Management System",
   "main": "/bin/server.js",
-  "directories": {
-    "test": "test"
+  "engines": {
+    "node": ">=6.9.1"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/server.js",
+    "debud": "node debug bin/server.js",
+    "cucumber": "cross-env NODE_ENV=development cucumberjs"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,7 @@
     "Kole",
     "MEAN",
     "Student",
+    "agile",
     "Node"
   ],
   "author": "Chaiwa Berian",
@@ -25,4 +29,22 @@
     "url": "https://github.com/Silverkeytechnology/Kole/issues"
   },
   "homepage": "https://github.com/Silverkeytechnology/Kole#readme"
+  ,
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "chalk": "^1.1.3",
+    "cross-env": "^3.1.3",
+    "express": "^4.14.0",
+    "mongoose":
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "cucumber": "^1.3.1",
+    "database-cleaner": "^1.1.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.2",
+    "sinon": "^1.17.6",
+    "supertest": "^1.1.0"
+  }
 }
