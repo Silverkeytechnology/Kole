@@ -2,16 +2,16 @@
   "name": "kole",
   "version": "1.0.0",
   "description": "A Student Information Management System",
-  "main": "/bin/server.js",
+  "main": "./server/bin/server.js",
   "engines": {
     "node": ">=6.9.1"
   },
     "scripts": {
     "test": "cross-env NODE_ENV=test istanbul cover node_modules/mocha/bin/_mocha -R spec test/*/*.spec.js",
-    "start": "node bin/server.js",
-    "debud": "node debug bin/server.js",
+    "start": "node ./server/bin/server.js",
+    "debud": "node debug ./server/bin/server.js",
     "cucumber": "cross-env NODE_ENV=test cucumberjs",
-    "devstart": "nodemon bin/server.js"
+    "devstart": "nodemon ./server/bin/server.js"
   },
   "repository": {
     "type": "git",
