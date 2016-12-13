@@ -1,4 +1,4 @@
-let Student = require('../models/student.models');
+let Student = require('../models/student.model');
 
 //Return All Students
 exports.getAllStudents = function (req, res) {
