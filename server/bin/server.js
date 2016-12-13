@@ -1,12 +1,12 @@
 //Note: We use ECMAScript 6(ES6) or higher for all Devs at Silverkeytechnology
 
 //Setting up handles
-let express = require('express');
-let app = express();
-let dotenv = require('dotenv');
-let mongoose = require('mongoose');
-let chalk = require('chalk');
-let bodyParser = require('body-parser');
+let express = require('express'),
+    app = express(),
+    dotenv = require('dotenv'),
+    mongoose = require('mongoose'),
+    chalk = require('chalk'),
+    bodyParser = require('body-parser');
 
 //mount a few middleware to handle client HTTP requests
 app.use(bodyParser.json());
@@ -14,8 +14,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
-//load routing tables(configure routes), this is our custom middleware to ensure we have all the routing in place
-require('../app/router')(app)
+
 
 //load database configurations
 let configFile = './server/config/.env';
@@ -67,6 +66,9 @@ let server = app.listen(process.env.PORT, function(err, callback) {
 
   console.log('Kole App Server correcly connected, and is listening on port '+ process.env.PORT + '!', chalk.green('✓'));
 });
+
+//load routing tables(configure routes), this is our custom middleware to ensure we have all the routing in place
+require('../app/router')(app)
 
 //Expose the express server object so it can be accessed outside this module
 module.exports = server;
