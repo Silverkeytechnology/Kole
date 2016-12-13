@@ -6,9 +6,16 @@ let app = express();
 let dotenv = require('dotenv');
 let mongoose = require('mongoose');
 let chalk = require('chalk');
+let bodyParser = require('body-parser');
 
-//load routing tables
-require('../app/router')(app, dbConn)
+//mount a few middleware to handle client HTTP requests
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+}));
+
+//load routing tables(configure routes), this is our custom middleware to ensure we have all the routing in place
+require('../app/router')(app)
 
 //load database configurations
 let configFile = './server/config/.env';
