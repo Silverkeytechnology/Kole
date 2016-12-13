@@ -7,6 +7,9 @@ let dotenv = require('dotenv');
 let mongoose = require('mongoose');
 let chalk = require('chalk');
 
+//load routing tables
+require('../app/router')(app, dbConn)
+
 //load database configurations
 let configFile = './server/config/.env';
 if (process.env.NODE_ENV == "test") {
@@ -20,8 +23,14 @@ dotenv.load({ path: configFile });                //this will read the.env or .e
 let dbConn = mongoose.connection;
 //listen for when open connection
 dbConn.on('connected', function() {
+
   //we are connected
   console.log("Connected correcly to the database server", chalk.green('✓'));
+  //load routing tables
+  /*(require('../app/router')(app, dbConn), function(){
+    console.log("Loaded routing tables successfully!", chalk.green('✓'));
+  })*/
+
 });
 //listen for connection erros
 dbConn.on('error', console.error.bind(console, 'Database server connection error:', chalk.red('X')));
