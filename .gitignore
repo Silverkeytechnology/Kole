@@ -1,4 +1,12 @@
-node_modules*
-npm-debug.log*
-client/libs*
-server/config/.env.prod*
+client/libs/*
+node_modules/*
+data/*
+.idea/*
+*.swp
+.env
+npm-debug.log
+mongod*
+run_mongod.bat
+help
+add
+coverage

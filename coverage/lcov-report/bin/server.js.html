@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">73.08% </span>
+        <span class="strong">85% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>19/26</span>
+        <span class='fraction'>17/20</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">50% </span>
         <span class="quiet">Branches</span>
+        <span class='fraction'>1/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
         <span class='fraction'>2/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">16.67% </span>
-        <span class="quiet">Functions</span>
-        <span class='fraction'>1/6</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">73.08% </span>
+        <span class="strong">85% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>19/26</span>
+        <span class='fraction'>17/20</span>
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -90,34 +90,7 @@
 45
 46
 47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+48</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
@@ -133,39 +106,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
@@ -175,19 +131,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
@@ -206,8 +152,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
-&nbsp;
-&nbsp;
+//load routing tables(configure routes), this is our custom middleware to ensure we have all the routing in place
+require('../app/router')(app)
 &nbsp;
 //load database configurations
 let configFile = './server/config/.env';
@@ -217,29 +163,12 @@ let configFile = './server/config/.env';
 dotenv.load({ path: configFile });                //this will read the.env or .env.test file, parse the contents, and assign it to process.env
 &nbsp;
 //setup a connection to the server using mongoose
-  mongoose.connect(process.env.MONGODB);
-&nbsp;
+mongoose.connect(process.env.MONGODB);
 let dbConn = mongoose.connection;
-//listen for when open connection
-dbConn.on('connected', <span class="fstat-no" title="function not covered" >function() {</span>
-&nbsp;
-  //we are connected
-<span class="cstat-no" title="statement not covered" >  console.log("Connected correcly to the database server", chalk.green('✓'));</span>
-  //load routing tables
-  /*(require('../app/router')(app, dbConn), function(){
-    console.log("Loaded routing tables successfully!", chalk.green('✓'));
-  })*/
-&nbsp;
-});
-//listen for connection erros
-dbConn.on('error', console.error.bind(console, 'Database server connection error:', chalk.red('X')));
-//When the connection is disconnected
-dbConn.on('disconnected', <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >  console.log("App lost connection to the database server! ",chalk.red('X'));</span>
-});
-//When we are reconnected
-dbConn.on('reconnected', <span class="fstat-no" title="function not covered" >function(){</span>
-<span class="cstat-no" title="statement not covered" >  console.log('Connection to the Database Server is restored!', chalk.green('✓'));</span>
+dbConn.on('error', console.error.bind(console, 'connection error:', chalk.red('✗')));
+dbConn.once('open', function () {
+    // we're connected!
+    console.log("Connected correctly to server", chalk.green('✓'));
 });
 //If the Node process ends, close the Mongoose connection to the DB
 process.on('SIGINT', <span class="fstat-no" title="function not covered" >function(){</span>
@@ -249,19 +178,9 @@ process.on('SIGINT', <span class="fstat-no" title="function not covered" >functi
   });
 });
 &nbsp;
-&nbsp;
-&nbsp;
-//Setup application server to listen for connections
-let server = app.listen(process.env.PORT, function(err, callback) {
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (err) {
-<span class="cstat-no" title="statement not covered" >    console.log('Kole App Server falied to connect !', chalk.green('X'), ' Error: '+ err);</span>
-  }
-&nbsp;
-  console.log('Kole App Server correcly connected, and is listening on port '+ process.env.PORT + '!', chalk.green('✓'));
+var server = app.listen(process.env.PORT, function () {
+  console.log('Your app listening on port ' + process.env.PORT + '!', chalk.green('✓'));
 });
-&nbsp;
-//load routing tables(configure routes), this is our custom middleware to ensure we have all the routing in place
-require('../app/router')(app)
 &nbsp;
 //Expose the express server object so it can be accessed outside this module
 module.exports = server;
@@ -271,7 +190,7 @@ module.exports = server;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Dec 14 2016 11:16:20 GMT+0200 (South Africa Standard Time)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Dec 15 2016 12:43:45 GMT+0200 (South Africa Standard Time)
 </div>
 </div>
 <script src="../prettify.js"></script>
