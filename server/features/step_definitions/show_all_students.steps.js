@@ -17,6 +17,8 @@ module.exports = function () {
   this.Given(/^there are students in the system$/, function(callback) {
     //code here
     new Student({'firstName': 'John','lastName': 'Banda','gender': 'Male'}).save();
+    new Student({'firstName': 'Ben','lastName': 'Tom','gender': 'Male'}).save();
+    new Student({'firstName': 'Jean','lastName': 'Mwanza','gender': 'Female'}).save();
     //if need for a promise arises add it here
     callback();
   });
@@ -36,6 +38,10 @@ module.exports = function () {
     //code here
     assert.equal(self.res.status, 200);
     assert.isArray(self.res.body);
+    assert.property(self.res.body[0], 'firstName');
+    assert.property(self.res.body[0], 'lastName');
+    assert.property(self.res.body[0], 'gender');
+    assert.property(self.res.body[0], '_id');
     //find ways of asserting that it contains the most relevant fields and types
     callback();
   });
