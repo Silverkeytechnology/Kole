@@ -6,11 +6,11 @@
 //destined to be used in step definitions
 let chai = require('chai');
 let chaiHttp = require('chai-http');
-let server = require(process.cwd() + server/bin/server);
+let server = require(process.cwd() + '/server/bin/server');
 //inject chaiHttp middleware so chai can easily make http requests
 chai.use(chaiHttp);
 //setup handle for student model
-let Student = require(process.cwd() + server/app/models/student.model);
+let Student = require(process.cwd() + '/server/app/models/student.model');
 
 //setup the world context for cucumber step definitions to use
 module.exports.World = function (callback) {
