@@ -3,7 +3,8 @@ node_js:
   - "6.9.1"
 services:
   - mongodb
-before_script: chmod 0777 ./node_modules/.bin/mocha
+install:
+  -npm install
 script:
   - npm test
   - npm run cucumber
