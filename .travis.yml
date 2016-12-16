@@ -4,5 +4,7 @@ node_js:
 services:
   - mongodb
 script:
+  - bower install
+  - npm install
   - npm test
   - npm run cucumber
