@@ -4,7 +4,6 @@ node_js:
 services:
   - mongodb
 install:
-  - npm install -g bower
   - bower install
   - npm install
   - chmod +x node_modules/.bin/*
