@@ -5,6 +5,7 @@ services:
   - mongodb
 install:
   - npm install
+  - chmod +x node_modules/.bin/*
 script:
   - npm test
   - npm run cucumber
