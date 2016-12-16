@@ -3,8 +3,10 @@ node_js:
   - "6.9.1"
 services:
   - mongodb
+before_script:
+  - chmod a+x node_modules/mocha/bin/_mocha
+  - chmod a+x cucumberjs server/features
 script:
-  - bower install
   - npm install
-  - chmod a+x npm test
-  - chmod a+x npm run cucumber
+  - npm test
+  - npm run cucumber
