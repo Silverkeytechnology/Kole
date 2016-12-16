@@ -4,9 +4,9 @@ node_js:
 services:
   - mongodb
 before_script:
-  - chmod a+x node_modules/mocha/bin/_mocha
-  - chmod a+x cucumberjs server/features
-script:
   - npm install
+  - chmod a+x node_modules/mocha/bin/_mocha
+  - chmod a+x server/features
+script:
   - npm test
   - npm run cucumber
