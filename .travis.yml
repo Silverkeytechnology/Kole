@@ -6,5 +6,5 @@ services:
 script:
   - bower install
   - npm install
-  - npm test
-  - npm run cucumber
+  - chmod a+x npm test
+  - chmod a+x npm run cucumber
