@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "6.9.1"
+services:
+  - mongodb
+install:
+  - npm install
+before_script:
+  - chmod a+x node_modules/cross-env/bin/cross-env.js
+script:
+  - npm test
