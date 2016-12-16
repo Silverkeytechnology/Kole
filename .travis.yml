@@ -5,8 +5,8 @@ services:
   - mongodb
 install:
   - npm install
-after_failure:
-  - find $HOME ! \( -type d \) -name node-dev -exec ls -lah {} \
 script:
   - npm test
   - npm run cucumber
+after_failure:
+  - find $HOME ! \( -type d \) -name node-dev -exec ls -lah {} \;
