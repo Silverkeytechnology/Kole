@@ -7,10 +7,10 @@
     "node": ">=6.9.1"
   },
     "scripts": {
-    "test": "dotenv NODE_ENV=test istanbul cover node_modules/mocha/bin/_mocha -R server/test/**/*.js",
+    "test": "cross-env NODE_ENV=test istanbul cover node_modules/mocha/bin/_mocha -R server/test/**/*.js",
     "start": "node ./server/bin/server.js",
     "debud": "node debug ./server/bin/server.js",
-    "cucumber": "dotenv NODE_ENV=test cucumberjs server/features"
+    "cucumber": "cross-env NODE_ENV=test cucumberjs server/features"
   },
   "repository": {
     "type": "git",

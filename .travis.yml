@@ -3,10 +3,9 @@ node_js:
   - "6.9.1"
 services:
   - mongodb
-before_script:
+install:
   - npm install
-  - chmod a+x node_modules/mocha/bin/_mocha
-  - chmod a+x server/features
+before_script:
+  - chmod a+x node_modules/cross-env/bin/cross-env.js
 script:
   - npm test
-  - npm run cucumber
