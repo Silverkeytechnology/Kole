@@ -4,7 +4,6 @@ node_js:
 services:
   - mongodb
 before_script:
-  - npm install npm@latest
   - npm install
   - chmod a+x node_modules/mocha/bin/_mocha
   - chmod a+x server/features
