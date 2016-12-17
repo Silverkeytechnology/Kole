@@ -13,10 +13,10 @@ script:
 - npm run cucumber
 deploy:
   provider: heroku
-  buildpack: nodejs
   api_key:
-    secure: c4qHffA1rRMH535WcC7eb3UWyPiwrAUdi9CSFmZh6UI03PoqTlG9kOyMdV+dshJFly2E6R51h+7gkxG+8gP/ALVFjYiIPMOrJ1+tQi/G8ahaBikLVy9fNiEHvX+VrgK8GOhhJh+Rw0YYoZZU6piIaaj7pWudAv4xTQZDIG36b30Z2wKD1RsN9FUt61vcmCjBHJTHaDXrwgaWJsGY/YW/WF2HXYzLdeVb9ZUXQTHO3sP4ELIHBLuX2Mq9x4rH5l9wK4iKj/bl6BF8vp+hTKi6ERJyMJW0Wbm8zQjWeXfhtQJR17RMGgX43KhxlYv653h7WHcpLA6QIlXh3kfc/sK4jdt9bCz4/tFC2zPpChJ3e4Cc5ZOZxTF7paobxu1N/EDtLGp44YLYOZqRtanFW0poLAsXO4zrvxpLDwXJ2/QZEKdPAOTikbCJwnzKRCOnc+DXveii+K5iPk+Z5DMZNAqJ06uyQcdMhBqxrYCrVUCpRFeoA0EhLK+3Ka2AxWaJT6y/qGfhidLu542i6nnvhRX1BdLRBb1FbVH4XxVKL1cW+mdPjlx0u04QoC2koWTE/5bnqonILBdAmbMUySsF5/wQz/di0U3cKMmGcDwsbsbBvom51pJKgux+6u8JUXg4NVbJzcVekxRP7c/2A66zKstuTjoepYsJ/IFUMwVMfTBs4gk=
-  app:
-    master: kole-api
+    secure: fMK/DB1rgcuu68WCzJ5yOkemtd0e3bwIMVyLYzNIxd4b4IknEiGo4ffS4M02568t1QpUHHI98CIUpB6WuK6tS+cSUYFALV/FgPrV1DLKrkF148AQn5xsiuprxs9nGDk6wRNtV32kt5RGvSZbtOqo7Lp7Dh8tskoApRuEmTlidDKyQzUSFlfYND0GBnx+6vwc1ogcMdHfo9dF2MiKz+JsNrSaW8SrUh971dDv1R+pEf1+9MXOxu5fwvhTm8Dv0b9rhAGmlJU3dRKeebzEvqzaTGV/ogU7nf39+nxSlQyml74YP1IJeLTETpGSG/L6AJ8JYnaveGAsRPvnqoWQJ68lnZr+u0NRqG0z9ZEhvZeIDWfmNXc9JBhvkgueq2fhK8DgzrZJR4QREPjqn+BBeNIwP64WtjAavxji7vpAZbDWefLoFKYhFpwPiwieTVcgvAfwTwP01WMtlCIptEMEni+4jHVsK1SJuwXGLZqCTJwIP41iT3q4yrlYjT9eVkb4XCcNnIm9NmbnNaAuY1+hk0hV2do8Z1zeFCeUDvQHw9VzuKV4o0RCeat/Dij2g/i4PvRdsQwKAncrqdpYg8emQ7yQNZeEAZPvvqRqibH4VauueYR4JiQQxWYgO3vh/r5ficO/MHIZ4b5ZITU+OBoiQ18kwQ8NeOLv/XkhO4SR5j0f558=
+  app: kole-api
+  on:
+    repo: Silverkeytechnology/Kole
 after_failure:
 - find $HOME ! \( -type d \) -name node-dev -exec ls -lah {} \;
