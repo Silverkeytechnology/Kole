@@ -17,14 +17,23 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 require('../app/router')(app)
 
 //load database configurations
-let configFile = './server/config/.env';
-if (process.env.NODE_ENV == "test") {
-  configFile = './server/config/.env.test';
+if (process.env.NODE_ENV == "live") {
+  mongoose.connect(process.env.MONGODB_LIVE);
 }
-dotenv.load({ path: configFile });                //this will read the.env or .env.test file, parse the contents, and assign it to process.env
+else {
+  let configFile = './server/config/.env';
+  if (process.env.NODE_ENV == "test") {
+    configFile = './server/config/.env.test';
+  }
+  else if (process.env.NODE_ENV == "devs") {
+    configFile = './server/config/.env.devs';
+  }
+  dotenv.load({ path: configFile });                //this will read the.env or .env.test file, parse the contents, and assign it to process.env
 
-//setup a connection to the server using mongoose
-mongoose.connect(process.env.MONGODB);
+  //setup a connection to the server using mongoose
+  mongoose.connect(process.env.MONGODB);
+}
+
 let dbConn = mongoose.connection;
 dbConn.on('error', console.error.bind(console, 'connection error:', chalk.red('✗')));
 dbConn.once('open', function () {
