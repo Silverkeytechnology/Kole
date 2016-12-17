@@ -11,8 +11,6 @@ install:
 script:
 - npm test
 - npm run cucumber
-after_failure:
-- find $HOME ! \( -type d \) -name node-dev -exec ls -lah {} \;
 deploy:
   provider: heroku
   buildpack: nodejs
@@ -20,3 +18,5 @@ deploy:
     secure: c4qHffA1rRMH535WcC7eb3UWyPiwrAUdi9CSFmZh6UI03PoqTlG9kOyMdV+dshJFly2E6R51h+7gkxG+8gP/ALVFjYiIPMOrJ1+tQi/G8ahaBikLVy9fNiEHvX+VrgK8GOhhJh+Rw0YYoZZU6piIaaj7pWudAv4xTQZDIG36b30Z2wKD1RsN9FUt61vcmCjBHJTHaDXrwgaWJsGY/YW/WF2HXYzLdeVb9ZUXQTHO3sP4ELIHBLuX2Mq9x4rH5l9wK4iKj/bl6BF8vp+hTKi6ERJyMJW0Wbm8zQjWeXfhtQJR17RMGgX43KhxlYv653h7WHcpLA6QIlXh3kfc/sK4jdt9bCz4/tFC2zPpChJ3e4Cc5ZOZxTF7paobxu1N/EDtLGp44YLYOZqRtanFW0poLAsXO4zrvxpLDwXJ2/QZEKdPAOTikbCJwnzKRCOnc+DXveii+K5iPk+Z5DMZNAqJ06uyQcdMhBqxrYCrVUCpRFeoA0EhLK+3Ka2AxWaJT6y/qGfhidLu542i6nnvhRX1BdLRBb1FbVH4XxVKL1cW+mdPjlx0u04QoC2koWTE/5bnqonILBdAmbMUySsF5/wQz/di0U3cKMmGcDwsbsbBvom51pJKgux+6u8JUXg4NVbJzcVekxRP7c/2A66zKstuTjoepYsJ/IFUMwVMfTBs4gk=
   app:
     master: kole-api
+after_failure:
+- find $HOME ! \( -type d \) -name node-dev -exec ls -lah {} \;
