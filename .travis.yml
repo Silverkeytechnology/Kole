@@ -18,5 +18,8 @@ deploy:
   app: kole-api
   on:
     repo: Silverkeytechnology/Kole
+env:
+  global:
+    secure: HO+nRi4vbuXuTzxpMaH95H0LFwQM3nbwHQFOvdP6gg9Gl2xLsS8VqycxAKTyxSUD3O9yo2bMCzN15VhS5fSfFECYq1Xo0ck3AnkjbWIyGaKyEhvhnSEMyu3E6WuzP5rlXMtWCC9A1JufMkSy7yN7uIL3n+T4+5W5jiDQ66MMycc7O4A9TFaDaJtlhwIl7fLwL1ddcO7WYmoaXzu717V0Y4GY3m+Juu4RjUTV26NTuhoUc1KjiErhyMIpJS5MpqStC9dWEAHy89vh/AirEfXX8RK9bfwLV9sfk+AZu3gph3KtKKw7YZ3PLSQyoHxdIYbg23XKNfFuUnsHdxtDTqmh/OixaE+qddjomEhusinrzVNKo8Plpzm57PDj/RbruTgKyo3QcUIfZDGvdBDIRGJntm2ss9LlPog9F9pWQs4YSNLKV+cgTP4cLoDaI9RMxFbmvd04206czeP8JduqPyPnY+EltFjogVOde0VWwhUXrRynS/T7X0wzG38fxLx9cyZErNLCpIEqQLqp5fm/YAMMdlXUuux0lnMQsdU/+WyAekc16Y3i+mCNvRXGZkLNsMZP1CQO/AblWmoaxxQrbGi6a5ZaDnIJI8LCjJZp0EKeYLMJF/kglUv68nN448S7jIBMOGeUqbNBBPCKnKygseJ8OB0joQb2PFS/VAdvBBZg9E0=
 after_failure:
 - find $HOME ! \( -type d \) -name node-dev -exec ls -lah {} \;
