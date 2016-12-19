@@ -2,7 +2,7 @@ angular.module("koleWebClient", ['ngRoute'])
   .config(function($routeProvider) {
     $routeProvider
         .when("/", {
-            templateUrl: "index.html",
+            templateUrl: "allStudentsList.html",
             controller: "StudentListController",
             resolve: {
               students: function(Students){
