@@ -13,6 +13,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
+//app.use(express.static(__dirname + "/client"));
+//app.set('views', __dirname + '/client/views');
+
+// Generic error handler used by all endpoints.
+//function handleError(res, reason, message, code) {
+//  console.log("ERROR: " + reason);
+//  res.status(code || 500).json({"error": message});
+//}
 //load routing tables(configure routes), this is our custom middleware to ensure we have all the routing in place
 require('../app/router')(app)
 
@@ -35,10 +43,10 @@ else {
 }
 
 let dbConn = mongoose.connection;
-dbConn.on('error', console.error.bind(console, 'connection error:', chalk.red('✗')));
+dbConn.on('error', console.error.bind(console, 'Database connection error for:', process.env.MONGODB, chalk.red('✗')));
 dbConn.once('open', function () {
     // we're connected!
-    console.log("Connected correctly to server", chalk.green('✓'));
+    console.log("Connected correctly to database server", chalk.green('✓'));
 });
 //If the Node process ends, close the Mongoose connection to the DB
 process.on('SIGINT', function(){
