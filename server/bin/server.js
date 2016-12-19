@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
-//app.use(express.static(__dirname + "/client"));
+app.use(express.static(__dirname + "/client"));
 //app.set('views', __dirname + '/client/views');
 
 // Generic error handler used by all endpoints.
