@@ -10,10 +10,7 @@ angular.module("koleWebClient", ['ngRoute'])
               }
             }
           })
-          .otherwise({
-            redirectTo: "/"
-          })
-    })
+        })
     .service("Students", function($http) {
       this.getAllStudents = function() {
         return $http.get("/api/students")
