@@ -13,14 +13,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
-app.use(express.static(__dirname + "/client"));
-//app.set('views', __dirname + '/client/views');
+
+//tell express where to find static files, including the index file
+app.use(express.static(process.cwd() + "/client"));
+
+app.set('views', process.cwd() + '/client/views');
 
 // Generic error handler used by all endpoints.
-//function handleError(res, reason, message, code) {
-//  console.log("ERROR: " + reason);
-//  res.status(code || 500).json({"error": message});
-//}
+function handleError(res, reason, message, code) {
+  console.log("ERROR: " + reason);
+ res.status(code || 500).json({"error": message});
+}
 //load routing tables(configure routes), this is our custom middleware to ensure we have all the routing in place
 require('../app/router')(app)
 
