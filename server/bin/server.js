@@ -26,12 +26,13 @@ let dir = path.join(__dirname, 'client');
 let dir2 = path.resolve('./') + "/client";
 let dir3 = path.join(process.cwd(), 'client');
 let dir4 = process.cwd();
+let dir5 = path.join(__dirname, '../../client');
 
-console.log("dir: ",dir, 'dir2: ', dir2, 'dir3: ', dir3, 'process.cwd(): ',dir4);
+//console.log("dir: ",dir, 'dir2: ', dir2, 'dir3: ', dir3, 'process.cwd(): ',dir4, '__dirname + ../../client = ', dir5);
 
-app.use(express.static(path.resolve('./') + "/client"));
+app.use(express.static(path.join(__dirname, '../../client')));
 
-app.set('views', path.resolve('./') + '/client/views');
+//app.set('views', path.resolve('./') + '/client/views');
 
 // Generic error handler used by all endpoints.
 function handleError(res, reason, message, code) {
