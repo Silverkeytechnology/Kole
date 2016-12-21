@@ -6,7 +6,8 @@ let express = require('express'),
     dotenv = require('dotenv'),
     mongoose = require('mongoose'),
     chalk = require('chalk'),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+    path = require('path');
 
 //mount a few middleware to handle client HTTP requests
 app.use(bodyParser.json());
@@ -14,10 +15,16 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
-//tell express where to find static files, including the index file
-app.use(express.static(process.cwd() + "/client"));
+//let cwd = process.cwd();
+//let dir = __dirname;
+//let slash = path.resolve('./');
 
-app.set('views', process.cwd() + '/client/views');
+//console.log('process.cwd() : ', cwd, '__dirname : ', __dirname, 'Slash Resolved: ', slash);
+
+//tell express where to find static files, including the index file
+app.use(express.static(path.resolve('./') + "/client"));
+
+app.set('views', path.resolve('./') + '/client/views');
 
 // Generic error handler used by all endpoints.
 function handleError(res, reason, message, code) {
