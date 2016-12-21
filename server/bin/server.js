@@ -22,6 +22,13 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 //console.log('process.cwd() : ', cwd, '__dirname : ', __dirname, 'Slash Resolved: ', slash);
 
 //tell express where to find static files, including the index file
+let dir = path.join(__dirname, 'client');
+let dir2 = path.resolve('./') + "/client";
+let dir3 = path.join(process.cwd(), 'client');
+let dir4 = process.cwd();
+
+console.log("dir: ",dir, 'dir2: ', dir2, 'dir3: ', dir3, 'process.cwd(): ',dir4);
+
 app.use(express.static(path.resolve('./') + "/client"));
 
 app.set('views', path.resolve('./') + '/client/views');
