@@ -7,9 +7,11 @@ let express = require('express'),
     mongoose = require('mongoose'),
     chalk = require('chalk'),
     bodyParser = require('body-parser'),
-    path = require('path');
+    path = require('path'),
+    cors = require('cors');
 
 //mount a few middleware to handle client HTTP requests
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
